@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>MiniShop Login</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:0;
+    background:#f4f4f4;
+}
+
+header{
+    background:#333;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#555;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.container{
+    width:320px;
+    margin:70px auto;
+    background:white;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0px 0px 6px gray;
+    text-align:center;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:#333;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#111;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>MiniShop</h1>
+<p>Your Simple Online Store</p>
+</header>
+
+<nav>
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('login') }}">Login</a>
+</nav>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<form method="POST" action="/login">
+
+<input type="text" name="username" placeholder="Enter Username" required>
+
+<input type="password" name="password" placeholder="Enter Password" required>
+
+<br><br>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
